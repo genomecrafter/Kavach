@@ -17,7 +17,6 @@ KAVACH (Sanskrit/Hindi for *armour*) sits between users and any large language m
 7. [Reproducing the experiments](#reproducing-the-experiments)
 8. [Repository structure](#repository-structure)
 9. [Limitations and ethics](#limitations-and-ethics)
-10. [Citation](#citation)
 
 ---
 
