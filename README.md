@@ -4,8 +4,6 @@
 
 KAVACH (Sanskrit/Hindi for *armour*) sits between users and any large language model. It analyses the intent behind each prompt, detects jailbreak attempts written in English, Devanagari Hindi or romanized Hinglish, and responds with a **graded action** instead of a binary allow/refuse decision, so the protected model stays useful for legitimate requests.
 
-**Paper:** [`paper/main.pdf`](paper/main.pdf) · **Live demo:** `python -m kavach.server` · **Training evidence:** [`dl/kaggle/kavach_router_kaggle_executed.ipynb`](dl/kaggle/kavach_router_kaggle_executed.ipynb)
-
 ---
 
 ## Contents
@@ -111,7 +109,9 @@ The server, `bench/run_llm.py` and `dl/cascade_eval.py` load `.env` automaticall
 
 ## Usage
 
-### Live demo
+### Web demo (runs locally)
+
+The demo is not hosted publicly; it runs on your machine and calls the LLM provider with your own API key.
 
 ```bash
 python -m kavach.server                     # Gemini (default provider), http://localhost:8000
@@ -210,14 +210,3 @@ examples/ · tests/
 
 **Ethics.** The repository contains no newly authored attack prompts. All harmful prompts come from existing research datasets (AdvBench, XSTest, MultiJail, jailbreak_llms, inspect-india-evals), and the derived variants only change script and spelling. Model output in the demo is HTML-escaped before rendering.
 
-## Citation
-
-```bibtex
-@misc{kavach2026,
-  title  = {KAVACH: A Model-Agnostic, Intent-Aware Jailbreak Defence Layer for LLMs with
-            Tactic--Harm Decoupling and Hindi--Hinglish Canonicalization},
-  author = {Das, Vaibhavi},
-  year   = {2026},
-  url    = {https://github.com/genomecrafter/Kavach}
-}
-```
