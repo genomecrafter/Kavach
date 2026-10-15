@@ -1,0 +1,11 @@
+{
+ "base_model": "xlm-roberta-base",
+ "threshold": 0.12929275631904602,
+ "target_recall": 0.95,
+ "max_len": 256,
+ "exclude_source": "india-safety",
+ "best_val_auroc": 0.941701680672269,
+ "test_auroc": 0.7965594197335469,
+ "test_auprc": 0.8643933902343387,
+ "n_params_M": 278.0
+}

@@ -1,0 +1,25 @@
+train 1683  val 267  test 4648  device cuda  model distilbert-base-multilingual-cased
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/100 [00:00<?, ?it/s]Loading weights: 100%|██████████| 100/100 [00:00<00:00, 4302.91it/s]
+[transformers] [1mDistilBertForSequenceClassification LOAD REPORT[0m from: distilbert-base-multilingual-cased
+Key                     | Status     | 
+------------------------+------------+-
+vocab_transform.weight  | UNEXPECTED | 
+vocab_layer_norm.bias   | UNEXPECTED | 
+vocab_layer_norm.weight | UNEXPECTED | 
+vocab_transform.bias    | UNEXPECTED | 
+vocab_projector.bias    | UNEXPECTED | 
+pre_classifier.weight   | MISSING    | 
+pre_classifier.bias     | MISSING    | 
+classifier.bias         | MISSING    | 
+classifier.weight       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+{"epoch": 1, "train_loss": 0.536399269557325, "val_auroc": 0.9370830977953646, "val_auprc": 0.9527243623895668, "sec": 18.624146223068237}
+{"epoch": 2, "train_loss": 0.27281845193655097, "val_auroc": 0.9541548897682307, "val_auprc": 0.9646769284230245, "sec": 15.622222661972046}
+{"epoch": 3, "train_loss": 0.1707809482553373, "val_auroc": 0.9641605426794799, "val_auprc": 0.9720859177799118, "sec": 16.05354118347168}
+{"epoch": 4, "train_loss": 0.11388687467821212, "val_auroc": 0.9641605426794799, "val_auprc": 0.9719881182242116, "sec": 15.766571283340454}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.49it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  3.49it/s]
+FINAL {"base_model": "distilbert-base-multilingual-cased", "threshold": 0.0572819747030735, "target_recall": 0.95, "max_len": 256, "exclude_source": null, "best_val_auroc": 0.9641605426794799, "test_auroc": 0.9591731963331876, "test_auprc": 0.965029284022339, "n_params_M": 135.3}

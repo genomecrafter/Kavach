@@ -1,0 +1,38 @@
+# secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
+venv/
+
+# raw third-party datasets (re-download with bench/download.sh)
+bench/raw/
+
+# runtime state
+kavach_memory.json
+
+# large model weights (556 MB) - see dl/best_router/README.md
+dl/best_router/model.safetensors
+dl/runs/*/model.safetensors
+
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,27 @@
+train 1683  val 267  test 4648  device cuda  model xlm-roberta-base
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 2517.15it/s]
+[transformers] [1mXLMRobertaForSequenceClassification LOAD REPORT[0m from: xlm-roberta-base
+Key                         | Status     | 
+----------------------------+------------+-
+lm_head.dense.bias          | UNEXPECTED | 
+roberta.pooler.dense.weight | UNEXPECTED | 
+roberta.pooler.dense.bias   | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+lm_head.layer_norm.bias     | UNEXPECTED | 
+lm_head.dense.weight        | UNEXPECTED | 
+lm_head.bias                | UNEXPECTED | 
+classifier.dense.bias       | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+classifier.dense.weight     | MISSING    | 
+classifier.out_proj.weight  | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+{"epoch": 1, "train_loss": 0.5610888461431293, "val_auroc": 0.8801865460712267, "val_auprc": 0.8425063596015236, "sec": 32.760008573532104}
+{"epoch": 2, "train_loss": 0.34012212402857417, "val_auroc": 0.9570378745053703, "val_auprc": 0.9625919899116502, "sec": 32.20779848098755}
+{"epoch": 3, "train_loss": 0.2568152591810781, "val_auroc": 0.97263990955342, "val_auprc": 0.9772006790175378, "sec": 32.084102630615234}
+{"epoch": 4, "train_loss": 0.17392017562230092, "val_auroc": 0.9767665347654041, "val_auprc": 0.9809268120184483, "sec": 32.13213491439819}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.67it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.67it/s]
+FINAL {"base_model": "xlm-roberta-base", "threshold": 0.0693524107336998, "target_recall": 0.95, "max_len": 256, "exclude_source": null, "best_val_auroc": 0.9767665347654041, "test_auroc": 0.9659058225989046, "test_auprc": 0.9691923929032785, "n_params_M": 278.0}

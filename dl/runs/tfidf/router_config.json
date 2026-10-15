@@ -1,0 +1,12 @@
+{
+ "base_model": "tfidf-char-lr",
+ "threshold": 0.3202429067520081,
+ "target_recall": 0.95,
+ "exclude_source": null,
+ "best_val_auroc": 0.9663086489542114,
+ "kind": "sklearn",
+ "test_auroc": 0.9537673649260713,
+ "test_auprc": 0.9605244656000422,
+ "n_params_M": 0.3,
+ "sklearn_version": "1.7.2"
+}

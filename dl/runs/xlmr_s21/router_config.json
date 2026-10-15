@@ -1,0 +1,11 @@
+{
+ "base_model": "xlm-roberta-base",
+ "threshold": 0.06261702626943588,
+ "target_recall": 0.95,
+ "max_len": 256,
+ "exclude_source": null,
+ "best_val_auroc": 0.9747314867156585,
+ "test_auroc": 0.9659770300378566,
+ "test_auprc": 0.9712713923898126,
+ "n_params_M": 278.0
+}

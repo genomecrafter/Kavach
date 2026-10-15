@@ -1,0 +1,27 @@
+train 1281  val 214  test 4648  device cuda  model google/muril-base-cased
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8932.84it/s]
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: google/muril-base-cased
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.decoder.bias               | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+classifier.weight                          | MISSING    | 
+classifier.bias                            | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+{"epoch": 1, "train_loss": 0.6836929729820508, "val_auroc": 0.897452731092437, "val_auprc": 0.9062789335487749, "sec": 23.497793436050415}
+{"epoch": 2, "train_loss": 0.6154080251061665, "val_auroc": 0.8766193977591037, "val_auprc": 0.8228937843691013, "sec": 23.339900016784668}
+{"epoch": 3, "train_loss": 0.4841623988633599, "val_auroc": 0.916841736694678, "val_auprc": 0.8970786048964255, "sec": 23.24760127067566}
+{"epoch": 4, "train_loss": 0.4188787988114413, "val_auroc": 0.9217874649859943, "val_auprc": 0.8848374431544579, "sec": 23.33720326423645}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.98it/s]
+FINAL {"base_model": "google/muril-base-cased", "threshold": 0.3008996248245239, "target_recall": 0.95, "max_len": 256, "exclude_source": "india-safety", "best_val_auroc": 0.9217874649859943, "test_auroc": 0.8278854079453779, "test_auprc": 0.8531471057726911, "n_params_M": 237.6}

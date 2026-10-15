@@ -1,0 +1,27 @@
+train 1683  val 267  test 4648  device cuda  model xlm-roberta-base
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]Loading weights: 100%|██████████| 197/197 [00:00<00:00, 2605.38it/s]
+[transformers] [1mXLMRobertaForSequenceClassification LOAD REPORT[0m from: xlm-roberta-base
+Key                         | Status     | 
+----------------------------+------------+-
+lm_head.layer_norm.bias     | UNEXPECTED | 
+lm_head.bias                | UNEXPECTED | 
+lm_head.dense.weight        | UNEXPECTED | 
+roberta.pooler.dense.bias   | UNEXPECTED | 
+roberta.pooler.dense.weight | UNEXPECTED | 
+lm_head.dense.bias          | UNEXPECTED | 
+lm_head.layer_norm.weight   | UNEXPECTED | 
+classifier.dense.weight     | MISSING    | 
+classifier.out_proj.bias    | MISSING    | 
+classifier.out_proj.weight  | MISSING    | 
+classifier.dense.bias       | MISSING    | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+{"epoch": 1, "train_loss": 0.5386428326518848, "val_auroc": 0.9531373657433578, "val_auprc": 0.9633267779308123, "sec": 30.566309690475464}
+{"epoch": 2, "train_loss": 0.3041236815322246, "val_auroc": 0.9618993781797625, "val_auprc": 0.9685960336775205, "sec": 30.906251430511475}
+{"epoch": 3, "train_loss": 0.20621090817452806, "val_auroc": 0.9747314867156585, "val_auprc": 0.9798694914131038, "sec": 31.486950635910034}
+{"epoch": 4, "train_loss": 0.12462912155085631, "val_auroc": 0.9746184284906727, "val_auprc": 0.9797961919210215, "sec": 32.87770986557007}
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.61it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00,  1.60it/s]
+FINAL {"base_model": "xlm-roberta-base", "threshold": 0.06261702626943588, "target_recall": 0.95, "max_len": 256, "exclude_source": null, "best_val_auroc": 0.9747314867156585, "test_auroc": 0.9659770300378566, "test_auprc": 0.9712713923898126, "n_params_M": 278.0}

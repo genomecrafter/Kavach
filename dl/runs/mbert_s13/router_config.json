@@ -1,0 +1,11 @@
+{
+ "base_model": "distilbert-base-multilingual-cased",
+ "threshold": 0.0572819747030735,
+ "target_recall": 0.95,
+ "max_len": 256,
+ "exclude_source": null,
+ "best_val_auroc": 0.9641605426794799,
+ "test_auroc": 0.9591731963331876,
+ "test_auprc": 0.965029284022339,
+ "n_params_M": 135.3
+}

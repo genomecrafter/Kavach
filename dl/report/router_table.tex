@@ -1,0 +1,14 @@
+\begin{table*}[t]\centering\small
+\caption{Learned routers on the held-out test split (4{,}648 prompts). Route$^{+}$: harmful prompts sent to the judge; Route$^{-}$: benign prompts sent (cost). The operating threshold is chosen on validation for 95\% recall. Last column: Route$^{+}$ when each router is allowed exactly the rule router's judge budget. Mean$\pm$std over seeds where several were trained.}\label{tab:router}
+\begin{tabular}{lrrrrr}
+\toprule
+Router & Params (M) & AUROC & Route$^{+}$ & Route$^{-}$ & Route$^{+}$ @ equal budget \\
+\midrule
+Rule-based router (\textsc{Kavach}-H) & -- & -- & 71.8 & 38.2 & 71.8 \\
+DistilmBERT & 135.3 & 95.9 & 96.1 & 26.5 & 97.8 \\
+MuRIL base (3 seeds) & 237.6 & 95.5$\pm$0.3 & 95.4$\pm$0.6 & 22.7$\pm$7.4 & 97.5$\pm$0.5 \\
+TF-IDF + LR & 0.3 & 95.4 & 95.7 & 29.1 & 97.1 \\
+XLM-R base (3 seeds) & 278.0 & 96.6$\pm$0.1 & 95.0$\pm$0.4 & 15.9$\pm$1.4 & 98.5$\pm$0.4 \\
+\bottomrule
+\end{tabular}
+\end{table*}

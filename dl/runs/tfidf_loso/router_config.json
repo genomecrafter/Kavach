@@ -1,0 +1,11 @@
+{
+ "base_model": "tfidf-char-lr",
+ "threshold": 0.3392678682180036,
+ "target_recall": 0.95,
+ "exclude_source": "india-safety",
+ "best_val_auroc": 0.9502801120448179,
+ "kind": "sklearn",
+ "test_auroc": 0.7940590929025283,
+ "test_auprc": 0.8282138340717597,
+ "n_params_M": 0.3
+}

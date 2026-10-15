@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kavach-guard"
+version = "0.1.0"
+description = "KAVACH: model-agnostic, multilingual (English/Hindi/Hinglish), intent-aware jailbreak defence layer for LLMs"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests", "numpy", "scikit-learn"]
+
+[project.optional-dependencies]
+server = ["fastapi", "uvicorn"]
+bench = ["pandas"]
+all = ["fastapi", "uvicorn", "pandas", "pytest", "matplotlib", "joblib"]
+dl = ["torch", "transformers", "matplotlib"]
+demo = ["fastapi", "uvicorn", "torch", "transformers"]
+
+[project.scripts]
+kavach-server = "kavach.server:main"
+
+[tool.setuptools]
+packages = ["kavach"]
+
+[tool.setuptools.package-data]
+kavach = ["resources/*.json", "web/*.html"]

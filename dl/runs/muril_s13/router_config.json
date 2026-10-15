@@ -1,0 +1,11 @@
+{
+ "base_model": "google/muril-base-cased",
+ "threshold": 0.195901557803154,
+ "target_recall": 0.95,
+ "max_len": 256,
+ "exclude_source": null,
+ "best_val_auroc": 0.9684850197851894,
+ "test_auroc": 0.9563518797187678,
+ "test_auprc": 0.9569836792175757,
+ "n_params_M": 237.6
+}

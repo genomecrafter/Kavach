@@ -1,0 +1,11 @@
+{
+ "base_model": "google/muril-base-cased",
+ "threshold": 0.3008996248245239,
+ "target_recall": 0.95,
+ "max_len": 256,
+ "exclude_source": "india-safety",
+ "best_val_auroc": 0.9217874649859943,
+ "test_auroc": 0.8278854079453779,
+ "test_auprc": 0.8531471057726911,
+ "n_params_M": 237.6
+}

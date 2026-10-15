@@ -1,0 +1,71 @@
+{
+  "instruction_override": {
+    "weight": 0.6,
+    "patterns": [
+      "\\b(ignore|disregard|forget|override|bypass)\\b.{0,30}\\b(previous|prior|above|earlier|all|your|system)\\b.{0,20}\\b(instructions?|rules?|guidelines?|prompts?|polic(y|ies)|restrictions?)",
+      "\\b(pichl[eia]|purane|sab(hi)?|saare|apne)\\b.{0,25}\\b(instructions?|niyam|rules?|nirdesh)\\b.{0,25}\\b(bh?o+l|ignore|chh?od|na?zarandaaz)",
+      "\\b(new|updated) (system )?instructions?\\s*:",
+      "\\bsystem\\s*(prompt|message)\\s*:"
+    ]
+  },
+  "persona_roleplay": {
+    "weight": 0.35,
+    "patterns": [
+      "\\b(you are|you're|act as|pretend (to be|you are)|roleplay as|from now on you)\\b.{0,40}\\b(no|without|free|unfiltered|uncensored|evil|unrestricted|jailbroken)",
+      "\\b(act as|pretend (to be|that you|you)|roleplay as|play the role of|you are now)\\b",
+      "\\b(ab|aaj se)\\b.{0,15}\\b(tum|aap|tu)\\b.{0,30}\\b(ho|hai|bano|bann?a?o)\\b",
+      "\\bmaan\\s*lo\\b.{0,30}\\b(tum|aap|tu)\\b",
+      "\\b(dan|stan|dude|aim|evilbot)\\b\\s*(mode|:)"
+    ]
+  },
+  "hypothetical_fiction": {
+    "weight": 0.25,
+    "patterns": [
+      "\\b(hypothetical(ly)?|imagine|in a (fictional|hypothetical) (world|scenario)|for a (novel|story|movie|screenplay|game))\\b",
+      "\\b(kahaa?ni|kalpana|kaalpanik|sapne mein|maan lijiye)\\b",
+      "\\bpurely (fictional|academic|theoretical)\\b"
+    ]
+  },
+  "pretext_authority": {
+    "weight": 0.25,
+    "patterns": [
+      "\\b(i am|i'm|as) (a|an)\\b.{0,20}\\b(researcher|professor|police|officer|doctor|security (expert|researcher)|pentester|developer of you|admin)\\b",
+      "\\b(for )?(educational|research|academic|testing) purposes?( only)?\\b",
+      "\\b(main|mai|hum)\\b.{0,15}\\b(police|doctor|scientist|researcher|officer)\\b.{0,10}\\b(hoon|hu|hain)\\b",
+      "\\b(i have|i've got) (permission|authorization|clearance)\\b"
+    ]
+  },
+  "privilege_escalation": {
+    "weight": 0.55,
+    "patterns": [
+      "\\b(developer|debug|god|sudo|admin|maintenance) mode\\b",
+      "\\b(jailbreak|jailbroken|unfiltered|uncensored|no (restrictions|limits|filters|rules|ethics)|without (any )?(restrictions|limits|filters|censorship))\\b",
+      "\\b(bina|binaa)\\b.{0,15}\\b(restriction|rok|filter|niyam|seema)",
+      "\\b(safety|content) (filters?|guidelines?|policy) (off|disabled|removed)\\b"
+    ]
+  },
+  "refusal_suppression": {
+    "weight": 0.45,
+    "patterns": [
+      "\\b(do not|don't|never|must not)\\b.{0,15}\\b(refuse|decline|apologi[sz]e|say (no|sorry)|warn|add (a )?disclaimer)",
+      "\\b(start|begin) (your )?(response|reply|answer) with\\b",
+      "\\b(mana|inkaar|refuse)\\b.{0,10}\\b(mat|na|nahi)\\b",
+      "\\b(sorry|maafi)\\b.{0,10}\\b(mat|nahi)\\b.{0,10}\\b(bolna|kehna|likhna)"
+    ]
+  },
+  "payload_splitting": {
+    "weight": 0.4,
+    "patterns": [
+      "\\b[a-z]\\s*=\\s*[\"'].{1,40}[\"'].{0,40}\\b[a-z]\\s*=\\s*[\"']",
+      "\\b(combine|concatenate|join)\\b.{0,20}\\b(the )?(strings?|parts?|variables?|words?)\\b",
+      "\\b(decode|translate)\\b.{0,30}\\b(and|then)\\b.{0,15}\\b(follow|execute|answer|do)\\b"
+    ]
+  },
+  "language_pivot": {
+    "weight": 0.2,
+    "patterns": [
+      "\\b(answer|reply|respond)\\b.{0,15}\\b(only )?in (hindi|hinglish|roman hindi|another language)\\b",
+      "\\b(translate)\\b.{0,30}\\b(and|then)\\b.{0,10}\\b(answer|explain|respond)\\b"
+    ]
+  }
+}
